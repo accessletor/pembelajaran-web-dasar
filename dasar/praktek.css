@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: url(oriental.png);
+	font: 16px/28px arial, sans-serif;
+	color: #333;
+}
+.top {
+	position: fixed;
+	background-color: salmon;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 30px;
+	border-bottom: 5px solid skyblue;
+	z-index: 9999px;
+}
+.container {
+	width: 960px;
+	background-color: #fff;
+	margin: 80px auto;
+}
+.pita {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background-image: url(img/Pita.png);
+	text-indent: -9999px;
+	position: absolute;
+	top: 10px;
+	right: -70px;
+}
+.header {
+	padding: 20px;
+}
+.header .judul{
+	font-size: 40px;
+	font-weight: bold;
+}
+.header ul li {
+	display: inline-block;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.header a {
+	color: salmon;
+	text-decoration: none;
+	padding: 3px;
+}
+.header a:hover {
+	background-color: skyblue;
+	color: #fff;
+}
+.hero {
+	margin-top: -10px;
+	height: 280px;
+	background-image: url(naru.jpg);
+	background-size: cover;
+	background-position: 0 -160px;
+	border-top: 5px solid salmon;
+	border-bottom: 5px solid skyblue;
+}
+.main {
+	width: 600px;
+	padding: 20px;
+	box-sizing: border-box;
+	float: left;
+}
+.artikel {
+	font-size: 26px;
+	font-weight: bold;
+}
+.penulis{
+	font-size: 12px;
+	color: #333;
+}
+.penulis a {
+	color: salmon;
+	text-decoration: none;
+}
+
+.main p {
+	font: 14px/28px arial, sans-serif;
+	padding-bottom: 20px;
+}
+.sidebar{
+	width: 300px;
+	float: right;
+	padding: 20px;
+}
+.sidebar h3 {
+	font-weight: bold;
+	color: #666;
+}
+.sidebar img {
+	width: 70px;
+	height: 70px;
+	float: left;
+	padding-right: 15px;
+}
+.sidebar p {
+	font: 12px/15px arial, sans-serif;
+}
+.footer {
+	background-color: #333;
+	color: white;
+}
+.copy {
+	text-align: center;
+	padding: 10px;
+}
+.cf:before,
+.cf:after{
+	content: "";
+	display: table;
+}
+.cf:after{
+	clear: both;
+}

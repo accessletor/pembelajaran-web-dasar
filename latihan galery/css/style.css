@@ -1,0 +1,160 @@
+@font-face {
+	font-family: "alex";
+	src: url(../font/alexbrush-regular-webfont.woff) format('woff');
+}
+body {
+	font: 18px/36px 'alex', 'arial', sans-serif;
+	background-color: #eeee;
+}
+h1 {
+	font-size: 80px;
+	text-align: center;
+	margin: 50px 0;
+	text-shadow: 1px 1px 2px white;
+}
+.container {
+	width: 600px;
+	background-color: white;
+	box-shadow: 0 0 3px 3px rgba(0,0,0,.3);
+	margin: auto;
+	padding: 20px;
+	border-radius: 10px;
+}
+.galery li {
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 5px solid #666;
+	float: left;
+	margin: 0 20px 0 0;
+	position: relative;	
+}
+.galery li a img{
+	border-radius: 50%;
+} 
+.galery li span {
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color: rgba(200,200,200,.5);
+	position: absolute;
+	top: 0;
+	text-align: center;
+	line-height: 120px;
+	color: black;
+	text-shadow: 1px 1px 1px white;
+	transform: scale(0) rotate(0);
+	opacity: 0;
+	transition: .3s;
+}
+
+/*overlay*/
+.galery li a:hover span {
+	opacity: 1;
+	transform: scale(1) rotate(360deg);
+}
+.asep:before,
+.asep:after {
+	content: "";
+	display: table;
+}
+.asep:after {
+	clear: both;
+}
+
+/*overlay*/
+.overlay {
+	position: fixed;
+	width: 0;
+	height: 0;
+	top: 0;
+	right: 0;
+	transition: 1s;
+	background-color: rgba(0,0,0,0);
+	padding: 100px 0;
+	text-align: center;
+	/*overflow: hidden;*/
+	z-index: 999;
+}
+.overlay:target {
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.5);
+	width: auto;
+	height: auto;
+}
+.overlay img {
+	max-height: 100%;
+	box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+
+}
+.overlay:target img {
+	animation: gambar 1s;
+}
+.overlay .close {
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	margin-left: -20px;
+	text-decoration: none;
+	color: white;
+	background-color: black;
+	border: 1px solid white;
+	line-height: 25px;
+	opacity: 0;
+}
+.overlay:target .close{
+	animation: close .5s 1s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+	animation: fade .5s .5s forwards;
+}
+
+/*nAVIGASI*/
+.next,.prev {
+	width: 57px;
+	height: 93px;
+	background-image: url(../Img/navigasi/kanan.png);
+	position: absolute;
+	text-indent: -9999px;
+	top: 40%;
+	margin-left: 50px;
+	opacity: 0;
+}
+.prev {
+	background-image: url(../Img/navigasi/kiri.png);
+	margin-left: -100px;
+}
+@keyframes gambar {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes close {
+	0% {
+		opacity: 0;
+		margin-top: -20px;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

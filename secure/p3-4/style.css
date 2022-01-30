@@ -1,0 +1,16 @@
+body{
+    /*background: #383a3d;*/
+    background: #4169E1;
+    padding-top: 10vh;  
+}
+ 
+/* mengatur warna backgroud form */
+form{
+    background: #fff;
+}
+ 
+/* mengatur border dan padding class form-container */
+.form-container{
+    border-radius: 10px;
+    padding: 30px;
+}

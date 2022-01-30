@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'royal';
+  src: url('../font/Royale Dreams.ttf') format('truetype');
+}
+
+body {
+  background-color: #1b1b32;
+}
+h1 {
+  font-family: 'royal', arial;
+  text-shadow: 0 3px 3px black;
+}
+figure {
+  overflow: hidden;
+}
+.image img {
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.image:hover img {
+  transform: scale(1.1);
+}
+.thumbnail {
+  border: 4px solid white;
+  border-radius: 3px;
+}

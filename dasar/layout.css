@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	box-sizing: border-box;
+	position: relative;
+}
+.satu, .dua {
+	font-weight: bold;
+	font-size: 80px;
+	text-align: center;
+}
+.satu {
+	margin: 50px auto 0;
+	position: relative;
+	right: 100px;
+}
+.dua {
+	margin: 0 auto 0;
+	position: relative;
+	left: 50px;
+}
+.container {
+	width: 90%;
+	height: 200px;
+	margin: 30px auto;
+}
+a {
+	text-decoration: none;
+}
+.dulet, .sulet, .bulet {
+	width: 200px;
+	height: 200px;
+	color: white;
+	text-align: center;
+	line-height: 200px;
+	font-size: 30px;
+}
+.dulet {
+	background-color: salmon;
+	margin-right: 153px;
+	float: left;
+	border-radius: 50%
+}
+.sulet {
+	background-color: skyblue;
+	margin-right: 153px;
+	float: left;
+	border-radius: 50%
+}
+.bulet {
+	background-color: rgb(249,245,117);
+	
+	float: left;
+	border-radius: 50%
+}
+.cf:before,
+.cf:after {
+	content: "";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+.z
+{
+	font-size: 100px;
+	width: 740px;
+	white-space:nowrap;
+	overflow:hidden;
+	-webkit-animation: ketik 5s steps(50, end);
+	animation: ketik 5s steps(50, end);
+}
+
+@keyframes ketik{
+		from { width: 0; }
+}
+
+@-webkit-keyframes ketik{
+		from { width: 0; }
+}

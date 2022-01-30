@@ -1,0 +1,164 @@
+@font-face {
+	font-family: "asep";
+	src : url(../font/asep.woff)format("woff");
+}
+body {
+	font: 18px/36px "asep", arial, sans-serif;
+	background-color: rgba(52,210,235,.4);
+	position: relative;
+}
+.background {
+	position: absolute;
+	left: 40%;
+	margin-top: 60px;
+	opacity: .5;
+}
+
+h1 {
+	text-align: center;
+	margin: 50px auto;
+	font-weight: bold;
+	font-size: 80px;
+}
+.container {
+	width: 800px;
+	background-color: white;
+	border: 1px solid black;
+	box-shadow: 0 0 3px 3px rgba(0,0,0,.5);
+	margin: 300px auto 0;
+	border-radius: 10px;
+}
+
+.container .kenangan {
+	padding: 5px;
+}
+.kenangan li {
+	width: 70px;
+	height: 70px;
+	background-color: salmon;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	margin-left: 17px;
+	border-radius: 10px;
+}
+.kenangan li a img {
+	border-radius: 10px;
+	box-shadow: 0 0 1px rgba(0,0,0,.8);
+	transition: .8s;
+}
+.kenangan li a img:hover {
+	transform: scale(1.2);
+}
+.cf:before,
+.cf:after{
+	content: "";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+
+/*overlay*/
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	background-color: rgba(0,0,0,0);
+	padding: 100px 0;
+	transition: 1s;
+}
+.overlay:target {
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.7);
+	width: auto;
+	height: auto;
+}
+.overlay img {
+	max-height: 100%;
+	box-shadow: 2px 2px 4px rgba(0,0,0,.7);
+}
+.overlay:target img {
+	animation: gambar 1s;
+}
+.overlay .close {
+	position: absolute;
+	top: 60px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	left: 50%;
+	font-family: arial, sans-serif;
+	opacity: 0;
+}
+.overlay:target .close {
+	animation: close .6s .3s forwards;
+}
+
+
+/*navigasi*/
+.next, .prev {
+	width: 57px;
+	height: 93px;
+	background-image: url(../Img/Navigasi/kanan.png);
+	position: absolute;
+	top: 40%;
+	text-indent: -99999px;
+	opacity: 0;
+}
+.prev {
+	background-image: url(../Img/Navigasi/kiri.png);
+	margin-left: -60px;
+}
+.overlay:target .next {
+	animation: kanan .5s .5s forwards;
+}
+.overlay:target .prev {
+	animation: kiri .5s .5s forwards;
+}
+/*animasi*/
+@keyframes gambar {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes close {
+	0% {
+		opacity: 0;
+		margin-top: 20px;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+@keyframes kanan {
+	0% {
+		opacity: 0;
+		margin-left: 20px;
+	}
+	100% {
+		opacity: 1;
+		margin-left: 0;
+	}
+}
+@keyframes kiri {
+	0% {
+		opacity: 0;
+		margin-right: 20px;
+	}
+	100% {
+		opacity: 1;
+		margin-right: 0;
+	}
+}
